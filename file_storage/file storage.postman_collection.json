@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "b4037802-22b2-4f0b-ba91-809c128ea98e",
+		"name": "file storage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23064542",
+		"_collection_link": "https://dark-space-170645.postman.co/workspace/dark-space-170645-Workspace~614da05b-fbf2-47a4-8672-547a3ca61240/collection/23064542-b4037802-22b2-4f0b-ba91-809c128ea98e?action=share&source=collection_link&creator=23064542"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nj\",\r\n    \"email\": \"joysahu37@gmail.com\",\r\n    \"password\":\"123\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.3:8000/api/signup/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"3"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verification",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.3:8000/api/verification/0v6Bpuf1NN/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"3"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"verification",
+						"0v6Bpuf1NN",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client access",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bmo6MTIz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.1.3:8000/api/list-uploaded-file/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"3"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"list-uploaded-file",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download file",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bmo6MTIz",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.1.3:8000/api/download-file/1/download",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"3"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"download-file",
+						"1",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operation User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/nj/Downloads/shreya_1.docx"
+						},
+						{
+							"key": "user",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.3:8000/api/upload-file/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"3"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload-file",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
